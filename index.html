@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mark-Sheet Data</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <form name="search_form" onsubmit="searchRecord()">
+        <input type="text" name="search_term" id="search_term" placeholder="Search..." />
+        <button type="button" onclick="searchRecord()">Search</button>
+    </form>
+    <table id="results">
+    </table>
+    <form name="RegForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" id="txtName" name="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Surname:
+                </td>
+                <td>
+                    <input type="text" id="txtSurname" name="Surname" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Maths:
+                </td>
+                <td>
+                    <input type="number" id="maths" size="65" name="Maths" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Science:
+                </td>
+                <td>
+                    <input type="number" id="science" size="65" name="Science" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sociology:
+                </td>
+                <td>
+                    <input type="number" id="sociology" size="65" name="Sociology" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    English:
+                </td>
+                <td>
+                    <input type="number" id="english" size="65" name="English" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Hindi:
+                </td>
+                <td>
+                    <input type="number" id="hindi" size="65" name="Hindi" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="saveRecord()">Save</button>
+                    <button type="button" onclick="next()">Next</button>
+                    <button type="button" onclick="previous()">Previous</button>
+                    <button type="button" onclick="deleteRecord()">Delete</button>
+                    <button type="button" onclick="addNew();">Add New</button>
+                </td>
+            </tr>
+        </table>
+
+        <div id="personTable"></div>
+    </form>
+
+    <style>
+        .active {
+            background-color: blue;
+        }
+    </style>
+
+
+</body>
+
+</html>
